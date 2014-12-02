@@ -6,7 +6,7 @@
             var access = routingConfig.accessLevels()
             $stateProvider.state('forgotPassword', {
                 url: '/forgotPassword',
-                templateUrl: 'security/forgotPassword/forgotPassword.tpl.html',
+                templateUrl: 'security/forgotPassword/forgotPassword.html',
                 controller: 'ForgotPasswordCtrl',
                 controllerAs: 'forgotPassword',
                 access: access.anon

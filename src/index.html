@@ -4,7 +4,7 @@
     <title ng-bind="pageTitle"></title>
 
     <!-- font awesome from BootstrapCDN -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">-->
 
     <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
     <link rel="stylesheet" type="text/css" href="<%= file %>"/>
@@ -15,9 +15,10 @@
     <% }); %>
 </head>
 <body>
-<header>
+<header ng-controller="NavCtrl as NavCtrl" access-level="accessLevels.user">
     <nav class="container navbar-default">
         <ul class="nav navbar-nav">
+            <a class="navbar-brand" href="#">ISHA</a>
             <li ui-sref-active="active">
                 <a ui-sref="home">Home</a>
             </li>
@@ -25,10 +26,17 @@
                 <a ui-sref="about">About</a>
             </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li ui-sref-active="active">
+                <a href="" ng-click="NavCtrl.logout()"> Logout</a>
+            </li>
+
+        </ul>
     </nav>
 </header>
 
-<div class="container" ui-view=""></div>
+<div class="container" ui-view="">
+</div>
 
 
 </body>

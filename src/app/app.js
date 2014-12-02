@@ -15,7 +15,9 @@
         }
 
         function isDevEnv() {
-            return window.location.href.indexOf('9001') != -1
+            var pattern=/900*/
+            return pattern.test(window.location.href);
+            
         }
 
         function isRESTRequest(url) {

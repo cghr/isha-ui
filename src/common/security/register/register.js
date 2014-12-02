@@ -7,7 +7,7 @@
             $stateProvider.state('register', {
                 url: "/register",
                 controller: "RegisterCtrl",
-                templateUrl: "security/register/register.tpl.html",
+                templateUrl: "security/register/register.html",
                 access: access.anon
             });
         })
